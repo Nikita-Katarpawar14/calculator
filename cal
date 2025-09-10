@@ -1,0 +1,97 @@
+#python Program  to create in  a simple calculator
+
+#3 steps to build calculator program
+#   1. functions  for operations
+#   2. user function
+#   3. print result
+
+#function to add two numbers
+
+def add(num1,num2):
+    return num1 + num2
+
+#function to substrate two numbers
+
+def sub(num1,num2):
+    return num1 - num2
+
+#function to multiply two numbers
+
+def multiply(num1,num2):
+    return num1 * num2
+
+#function to add Divide two numbers
+
+def divide(num1,num2):
+    return num1 / num2
+
+#function to average two numbers
+
+def average(num1,num2):
+    return (num1 + num2)/2
+
+
+#Here we are taking User input
+
+print("Please select something which is in the range given below: ")
+
+while True:
+    print("\n1 : Addition")
+    print("2 : Substration")
+    print("3 : Multiply")
+    print("4 : Division")
+    print("5 : Average")
+    print("6 : Exit")
+
+    choice = int(input("\nEnter Your choice: - "))
+
+    if choice == 6:
+        print("\nYou have chosen the Last operation that is 'Exit'.")
+        print("\nThank you for using <3.\n")
+        break
+
+    number1 = int(input("\nEnter First number:- "))
+    number2 = int(input("Enter Second number:- "))
+
+    if choice == 1:
+        print("\nYou have chosen the first operation that is 'Addition'.")
+        print("\nThe Addition of ",number1,"and ", number2 ,"is :- ",add(number1,number2))
+        
+    elif choice == 2:
+        print("\nYou have chosen the Second operation that is 'Substration'.")
+        print("\nThe Substration of ",number1,"and ", number2 ,"is :- ",sub(number1,number2))
+
+    elif choice == 3:
+        print("\nYou have chosen the Third operation that is 'Multiplication'.")
+        print("\nThe Multiply of ",number1,"and ", number2 ,"is :- ",multiply(number1,number2))
+
+    elif choice == 5:
+        print("\nYou have chosen the Five operation that is 'Average'.")
+        print("\nThe Average of ",number1,"and ", number2 ,"is :- ",average(number1,number2))
+
+    elif choice  not in [1,2,3,4,5]:
+        print("Invalid choice\tPlease chose something from the list.")
+        print("\n ")
+        break
+    
+    try:
+        if choice == 4:
+            print("\nYou have chosen the Four operation that is 'Division'.")
+            print("\nThe Division of ",number1,"and ", number2 ,"is :- ",divide(number1,number2))    
+
+    except Exception as err:
+        
+            print(f" \nsomethhing wrong here??? \n Error!!!{err}.")
+
+   
+
+        
+    else :
+        print("\n Thank you for using <3.\n")
+       
+
+
+
+
+    
+
